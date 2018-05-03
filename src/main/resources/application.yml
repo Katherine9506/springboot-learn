@@ -1,0 +1,12 @@
+foo:
+  list:
+    - name: my name
+      description: my description
+  hello: hello
+
+---
+spring:
+  profiles: dev
+foo:
+  list:
+    - name: my another name
