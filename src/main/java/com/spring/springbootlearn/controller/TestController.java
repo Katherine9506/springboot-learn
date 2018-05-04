@@ -1,6 +1,7 @@
 package com.spring.springbootlearn.controller;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.boot.logging.LoggingSystem;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -41,7 +42,7 @@ public class TestController {
 
     @PostMapping("index")
     public String index() {
-        return Hello;
+        return LoggingSystem.SYSTEM_PROPERTY;
     }
 
 }
