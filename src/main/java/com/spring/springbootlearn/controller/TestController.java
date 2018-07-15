@@ -2,6 +2,7 @@ package com.spring.springbootlearn.controller;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.boot.logging.LoggingSystem;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -16,7 +17,7 @@ import java.util.List;
  */
 @ConfigurationProperties(prefix = "foo")
 @RestController
-@RequestMapping("/")
+@RequestMapping("/test")
 public class TestController {
 
     private String Hello;
@@ -45,4 +46,8 @@ public class TestController {
         return LoggingSystem.SYSTEM_PROPERTY;
     }
 
+    @GetMapping("hello")
+    public String hello() {
+        return "hello springboot";
+    }
 }

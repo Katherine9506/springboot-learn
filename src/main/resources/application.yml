@@ -4,8 +4,6 @@ foo:
       description: my description
   hello: hello
 
-logging.
-
 ---
 spring:
   profiles: dev
