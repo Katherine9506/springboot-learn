@@ -2,10 +2,7 @@ package com.spring.springbootlearn.controller;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.boot.logging.LoggingSystem;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -46,8 +43,33 @@ public class TestController {
         return LoggingSystem.SYSTEM_PROPERTY;
     }
 
-    @GetMapping("hello")
-    public String hello() {
-        return "hello springboot";
+    @PostMapping("/test")
+    public MyPojo testRequestBody(@RequestBody MyPojo myPojo) {
+        return myPojo;
+    }
+
+    @PostMapping("/test2")
+    public MyPojo testRequestBody2(MyPojo myPojo) {
+        return myPojo;
+    }
+
+    @PostMapping("/test3")
+    public String testRequestBody3(String name, String description) {
+        return name + ":" + description;
+    }
+
+    @PostMapping("/test4")
+    public String testRequestBody4(String description, String name) {
+        return name + ":" + description;
+    }
+
+    @PostMapping("/test/{id}")
+    public String testPathVariable(Integer id) {
+        return "id:" + id;
+    }
+
+    @PostMapping("/test2/{id}")
+    public String testPathVariable2(@PathVariable Integer id) {
+        return "id:" + id;
     }
 }
