@@ -12,7 +12,7 @@ public class SpitterServiceImpl implements SpitterService {
     private SpitterRepository spitterRepository;
 
     @Override
-    public Spitter save(Spitter spitter) {
+    public boolean save(Spitter spitter) {
         return spitterRepository.save(spitter);
     }
 

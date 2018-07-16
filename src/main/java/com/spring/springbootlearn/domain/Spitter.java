@@ -1,17 +1,17 @@
 package com.spring.springbootlearn.domain;
 
-import javax.validation.constraints.NotNull;
+import javax.validation.constraints.NotEmpty;
 import java.util.Objects;
 
 public class Spitter {
     private Long id;
-    @NotNull
+    @NotEmpty(message = "firstName tip")
     private String firstName;
-    @NotNull
+    @NotEmpty
     private String lastName;
-    @NotNull
+    @NotEmpty
     private String username;
-    @NotNull
+    @NotEmpty
     private String password;
 
     public Spitter() {
@@ -55,6 +55,18 @@ public class Spitter {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
     }
 
     @Override

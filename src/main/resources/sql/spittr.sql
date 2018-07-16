@@ -20,10 +20,10 @@ CREATE TABLE `spittles` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-insert into spitters(firstName,lastName,username,password) VALUE ('Katherine','G','kath','123456');
-insert into spitters(firstName,lastName,username,password) VALUE ('Katherine','G','kath','123456');
-insert into spitters(firstName,lastName,username,password) VALUE ('Katherine','G','kath','123456');
-insert into spitters(firstName,lastName,username,password) VALUE ('Katherine','G','kath','123456');
+insert into spitters(first_name,last_name,username,password) VALUE ('Katherine','G','kath','123456');
+insert into spitters(first_name,last_name,username,password) VALUE ('Katherine','G','kath','123456');
+insert into spitters(first_name,last_name,username,password) VALUE ('Katherine','G','kath','123456');
+insert into spitters(first_name,last_name,username,password) VALUE ('Katherine','G','kath','123456');
 
 insert into spittles(message,time,latitude,longtitude) VALUE ('message test','2018-07-16 10:06:00','12.9','13.1');
 insert into spittles(message,time,latitude,longtitude) VALUE ('message test','2018-07-16 10:06:00','12.9','13.1');

@@ -29,8 +29,9 @@ public class SpitterController {
 
     //展现表单，允许用户注册
     @RequestMapping(value = "/register", method = RequestMethod.GET)
-    public String showRegistrationForm() {
-        return "registerForm";
+    public String showRegistrationForm(Model model) {
+        model.addAttribute(new Spitter());
+        return "register";
     }
 
     /*
@@ -41,7 +42,7 @@ public class SpitterController {
 //    public String processRegistration(@Valid Spitter spitter, Errors errors) {
     public String processRegistration(@Validated Spitter spitter, Errors errors) { //spring本身的@Validated
         if (errors.hasErrors()) {
-            return "registerForm";
+            return "register";
         }
         spitterRepository.save(spitter);
 //        spitterService.save(spitter);
