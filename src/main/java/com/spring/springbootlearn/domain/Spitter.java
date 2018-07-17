@@ -5,7 +5,7 @@ import java.util.Objects;
 
 public class Spitter {
     private Long id;
-    @NotEmpty(message = "firstName tip")
+    @NotEmpty(message = "{firstname.size}")
     private String firstName;
     @NotEmpty
     private String lastName;
